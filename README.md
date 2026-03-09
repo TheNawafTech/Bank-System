@@ -251,8 +251,10 @@ Bank-Management-System/
 
 ---
 
-# Author
+## Developed By
 
-Developed as a **C++ Object-Oriented Programming project** to practice building structured systems and simulate a banking management environment.
+Developed end-to-end by **Nawaf Altowairqi**
+
+GitHub: [https://github.com/TheNawafTech](https://github.com/TheNawafTech)
 
 ---
