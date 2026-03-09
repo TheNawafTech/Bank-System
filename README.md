@@ -1,66 +1,258 @@
-# Full-Bank-System
+# Bank Management System
 
-A complete console-based banking system developed entirely in **C++**.  
-The project simulates a banking environment where users can manage client accounts, perform transactions, and control user access with secure login and role-based authorization.
+A complete **console-based banking system** developed entirely in **C++**.
+The system simulates a real banking environment where users can manage client accounts, perform financial transactions, handle currency operations, and control system access through a secure authentication mechanism.
 
-All modules (authentication, transaction handling, file persistence, and input validation) were built completely from scratch without relying on third-party libraries.
+The project was built using **Object-Oriented Programming (OOP)** principles and modular design to simulate how a larger banking system might be structured.
 
----
-
-## Project Objective
-To design and implement a secure, modular banking system while practicing Object-Oriented Programming (OOP) in C++.  
-This project helped me **understand how to deal with large and complex systems**, from structuring modules and handling data persistence to enforcing secure login and user management.
-
-> هذا المشروع علمني كيف أتعامل مع **الأنظمة الكبيرة والمعقدة** من حيث تنظيم الوحدات، وحفظ البيانات في الملفات، وإدارة المستخدمين وتطبيق الدخول الآمن.
+All components — including authentication, transaction processing, file persistence, and system navigation — were implemented **from scratch without relying on third-party libraries**.
 
 ---
 
-## Technologies Used
-- **Language:** C++  
-- **Application Type:** Console Application  
-- **Data Storage:** File-based persistence (TXT files)  
-- **Platform:** Windows Desktop (x64)
+# Project Objective
+
+The goal of this project was to practice building a **larger structured application in C++** while applying real-world software design principles.
+
+Through this project, I practiced:
+
+* Structuring a modular system
+* Implementing a login and authentication system
+* Managing client and user data
+* Building multiple functional screens
+* Handling file-based data persistence
+* Designing reusable classes
+* Implementing transaction logic
+* Applying Object-Oriented Programming principles
+
+This project helped me understand how to organize and build **larger and more complex systems** rather than simple standalone programs.
 
 ---
-## Some Screenshots
 
-![Login Screen](Screenshot_Login.jpg)  
-![Main Menu](ScreenShor_MainScreen.jpg)  
-![Add New Client](ScreenShot_AddNewClient.jpg)  
-![Client List](ScreenShot_ClientList.jpg)  
+# Technologies Used
+
+* **Language:** C++
+* **Application Type:** Console Application
+* **Architecture Style:** Object-Oriented Programming (OOP)
+* **Data Storage:** Text files (File-based persistence)
+* **IDE:** Visual Studio
+* **Platform:** Windows Desktop (x64)
 
 ---
 
-## Project Structure
-```plaintext
-Full-Bank-system/
-├── Clients.txt                     # Stores client data
-├── Users.txt                       # Stores system users
-├── Currencies.txt                  # Stores currency data
-├── LoginRegister.text              # Login history and audit
-├── Main Screen.cpp                 # Main application logic
-├── ClsString.h                     # String utility functions
-├── ClsDates.h                      # Date/time utilities
-├── ClsPeriod.h                     # Period calculations
-├── clsBankClient.h                 # Client class definition
-├── clsUser.h                       # User class definition
-├── clsPerson.h                     # Base class for person info
-├── clsScreen.h                     # Generic screen handler
-├── clsAddNewClientScreen.h         # Screen for adding clients
-├── clsDeleteClientScreen.h         # Screen for deleting clients
-├── clsUpdateClientScreen.h         # Screen for updating client info
-├── clsFindClientScreen.h           # Screen for searching clients
-├── clsClientListScreen.h           # Screen for showing clients
-├── clsDepositClientScreen.h        # Screen for deposits
-├── clsWithdrawClientScreen.h       # Screen for withdrawals
-├── clsTransferLogClientScreen.h    # Transaction log screen
-├── clsWireTransferClientScreen.h   # Wire transfer logic
-├── clsTotalBalancesClientScreen.h  # Show total balances
-├── clsCurrencyExchangeScreen.h     # Currency exchange screen
-├── clsCurrencyListScreen.h         # Currency list
-├── clsUpdateCurrencyRateScreen.h   # Update currency rates
-├── clsManageUsersScreen.h          # User management
-├── clsLoginRegisterUsersScreen.h   # Login register view
-├── Interfacecommunication.h        # Console I/O handling
-├── OOP 11.vcxproj / filters / user # Visual Studio project files
-└── x64/Debug/                      # Compiled binaries
+# System Features
+
+The system includes several banking modules:
+
+### Authentication
+
+* Secure login system
+* User authentication from file storage
+* Role-based access control
+
+### Client Management
+
+* Add new clients
+* Update client information
+* Delete clients
+* Search for clients
+* View client list
+
+### Financial Operations
+
+* Deposit money
+* Withdraw money
+* Transfer funds
+* View transfer logs
+* View total balances
+
+### Currency Management
+
+* Currency list
+* Currency exchange
+* Currency calculator
+* Update currency rates
+
+### User Management
+
+* Add users
+* Update users
+* Delete users
+* View users list
+* Manage user permissions
+
+### System Utilities
+
+* Input validation
+* Date utilities
+* String utilities
+* Screen navigation system
+
+---
+
+# How to Run the Project
+
+1. Download or clone the repository.
+
+2. Open the project folder.
+
+3. Open the solution file:
+
+```
+BankManagement_System.sln
+```
+
+4. The project will open in **Visual Studio**.
+
+5. Run the program using:
+
+```
+Ctrl + F5
+```
+
+or press:
+
+```
+Local Windows Debugger
+```
+
+Opening the `.sln` file ensures that the **entire project structure loads correctly**.
+
+---
+
+# Login System
+
+The system reads login credentials from the file:
+
+```
+Users.txt
+```
+
+User records are stored using a structured delimiter format.
+
+Example record from the file:
+
+```
+User1#//#1234#//#123456#//#123456#//#User1#//#2345#//#-1
+```
+
+---
+
+# Default Login Credentials
+
+You can access the system using the following credentials:
+
+```
+Username: User1
+Password: 1234
+```
+
+During login, the program reads the `Users.txt` file and validates the entered credentials against the stored user records.
+
+If the credentials are correct, the user is granted access based on their defined permissions.
+
+You can also modify the `Users.txt` file to create new users or change credentials.
+
+---
+
+# Data Storage
+
+The system stores data using text files:
+
+```
+Clients.txt        → Client information
+Users.txt          → System users and login credentials
+Currencies.txt     → Currency data
+LoginRegister.txt  → Login history
+```
+
+This approach simulates a simple persistence layer without requiring a database.
+
+---
+
+# Project Structure
+
+```
+Bank-Management-System/
+│
+├── BankManagement_System.sln
+├── BankManagementSystem.vcxproj
+│
+├── Clients.txt
+├── Users.txt
+├── Currencies.txt
+├── LoginRegister.txt
+│
+├── Main Screen.cpp
+│
+├── clsDate.h
+├── clsPeriod.h
+├── clsString.h
+├── clsUtil.h
+│
+├── clsPerson.h
+├── clsBankClient.h
+├── clsUser.h
+│
+├── clsScreen.h
+├── clsMainScreenOf_OOP11.h
+│
+├── clsAddNewClientScreen.h
+├── clsDeleteClientScreen.h
+├── clsUpdateClientScreen.h
+├── clsFindClientScreen.h
+├── clsClientListScreen.h
+│
+├── clsDepositClientScreen.h
+├── clsWithdrawClientScreen.h
+├── clsWireTransferClientScreen.h
+├── clsTransferLogClientScreen.h
+├── clsTotalBalancesClientScreen.h
+│
+├── clsCurrencyListScreen.h
+├── clsFindCurrencyScreen.h
+├── clsCurrencyCalculatorScreen.h
+├── clsCurrencyExchangeScreen.h
+├── clsUpdateCurrencyRateScreen.h
+│
+├── clsAddNewUserScreen.h
+├── clsDeleteUserScreen.h
+├── clsUpdateUserScreen.h
+├── clsUsersListScreen.h
+├── clsManageUsersScreen.h
+│
+├── clsLoginUsersScreen.h
+├── clsLoginRegisterUsersScreen.h
+│
+├── Interfacecommunication.h
+│
+├── screenshots/
+└── x64/
+```
+
+---
+
+# Screenshots
+
+![Login Screen](Screenshot_Login.jpg)
+
+![Main Menu](ScreenShor_MainScreen.jpg)
+
+![Add Client](ScreenShot_AddNewClient.jpg)
+
+![Client List](ScreenShot_ClientList.jpg)
+
+---
+
+# Notes
+
+* The project focuses on **system design and logic rather than graphical interfaces**.
+* All modules were implemented manually to better understand system structure.
+* The system demonstrates how a **multi-module banking application** can be structured using C++.
+
+---
+
+# Author
+
+Developed as a **C++ Object-Oriented Programming project** to practice building structured systems and simulate a banking management environment.
+
+---
