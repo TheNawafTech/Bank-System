@@ -25,8 +25,8 @@ protected:
         cout << CurrentUser.GetUserName();
 
         cout << "\n\t\t\t\t\tDate : ";
-        ClsDates::GetSystemDate();
-        cout << ClsDates::DateToString(ClsDates()) << "\n\n";
+        ClsDates Date = ClsDates::GetSystemDate();
+        cout << ClsDates::DateToString(Date) << "\n";
     }
 
 

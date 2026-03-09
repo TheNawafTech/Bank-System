@@ -48,7 +48,7 @@ public:
 
 		Date._Year = now->tm_year + 1900;
 		Date._Month = now->tm_mon + 1;
-		Date._Day = now->tm_wday;
+		Date._Day = now->tm_mday;
 
 		return Date;
 	}
